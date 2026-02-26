@@ -1,0 +1,9 @@
+# -------------------------------
+# NetMaze NFS Automation Pipeline
+# -------------------------------
+
+# Run validation every 5 minutes
+*/5 * * * * /home/scripts/validation.sh >> /home/logs/cron_validation.log 2>&1
+
+# Run S3 upload every 10 minutes
+*/10 * * * * /home/scripts/s3_upload.sh >> /home/logs/cron_s3_upload.log 2>&1
