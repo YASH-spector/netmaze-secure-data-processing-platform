@@ -1,0 +1,32 @@
+Create Folder Structure
+
+On your local machine or EC2:
+
+mkdir python
+pip install pymysql -t python/
+
+Very important:
+The folder name MUST be python
+
+
+Zip It
+zip -r pymysql_layer.zip python
+
+Create Layer in AWS
+
+Go to:
+
+Lambda → Layers → Create Layer
+
+Upload:
+
+pymysql_layer.zip
+
+Attach Layer to Lambda
+
+Go to:
+
+Lambda → Your Function → Layers → Add Layer
+Select:
+
+netmaze-pymysql-layer
